@@ -1,0 +1,17 @@
+body {
+  padding: 0 15px;
+  font: 100% Lato, Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media all and (min-width: 600px) {
+  body {
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  .anchor {
+  	text-decoration: none;
+  	color: #888;
+  }
+}
