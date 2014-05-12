@@ -1,1 +1,1 @@
-exclude: ['LICENSE', 'README.md']
+exclude: ['LICENSE', 'README.md', 'build.js']

@@ -5,7 +5,8 @@ var fs = require("fs"),
     url = require("url");
 
 var vendorPath = path.join(__dirname, "_vendor"),
-    marked = require(path.join(vendorPath, "marked"));
+    marked = require(path.join(vendorPath, "marked")),
+    mkdirp = require(path.join(vendorPath, "mkdirp"));
 
 var renderer = new marked.Renderer();
 
@@ -55,5 +56,39 @@ fs.readFile(path.join(__dirname, "README.md"), "utf8", function readInfo(excepti
         console.log(exception || "GitHub project page generated successfully.");
       });
     }
+  }
+});
+
+// Generate redirects.
+var redirects = require(path.join(__dirname, '_data/redirects.json'));
+fs.readFile(path.join(__dirname, "page/redirect.html"), "utf8", function readInfo(exception, source) {
+  if (exception) {
+    console.log(exception);
+  } else {
+    redirects.forEach(function redirect(value) {
+      writeRedirect(value.url, value.redirect);
+    });
+  }
+
+  // Interpolates the redirect template and writes the result to disk.
+  function writeRedirect(directory, url) {
+    // Create the new directory.
+    mkdirp(path.join(__dirname, directory), function mkDir(exception) {
+      if (exception) {
+        console.log(exception);
+      } else {
+        // Write the redirect file to disk.
+        fs.writeFile(path.join(__dirname, directory, "index.html"), source.replace(/<%=\s*(.+?)\s*%>/g, function interpolate(match, data) {
+          switch (data) {
+            case "url":
+              // Interpolate the URL.
+              return url;
+          }
+          return "";
+        }), function writeFile(exception) {
+          console.log(exception || "Redirect `" + directory + "` for `" + url + "` generated successfully.");
+        }); 
+      }
+    });
   }
 });
