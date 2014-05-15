@@ -1,4 +1,10 @@
-[{
-	"url": "about-me",
-	"redirect": "https://d10.github.io/"
-}]
+[
+  {
+    "url": "about-me",
+    "redirect": "https://d10.github.io/"
+  },
+  {
+  	"url": "platform-demo",
+  	"redirect": "https://bestiejs.github.io/platform.js"
+  }
+]
