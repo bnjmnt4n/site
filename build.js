@@ -31,7 +31,7 @@ marked.setOptions({
 });
 
 // Generate the GitHub project page.
-fs.readFile(path.join(__dirname, "README.md"), "utf8", function readInfo(exception, source) {
+fs.readFile(path.join(__dirname, "about-me/README.md"), "utf8", function readInfo(exception, source) {
   if (exception) {
     console.log(exception);
   } else {
@@ -87,7 +87,7 @@ fs.readFile(path.join(__dirname, "page/redirect.html"), "utf8", function readInf
           return "";
         }), function writeFile(exception) {
           console.log(exception || "Redirect `" + directory + "` for `" + url + "` generated successfully.");
-        }); 
+        });
       }
     });
   }

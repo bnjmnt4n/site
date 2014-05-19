@@ -1,36 +1,16 @@
-# about-me
+# [d10.github.io](https://d10.github.io/)
 
-Hi! My name is Benjamin Tan, and I go by [@d10](https://github.com/d10)
-or [@demoneaux](https://twitter.com/demoneaux) online.
+Hi, this is the Git repository for @d10's site.
 
-I'm a student in [Singapore](http://en.wikipedia.org/wiki/Singapore),
-who does programming as a hobby. I've been programming since I was 9,
-when I popped the [red pill](http://en.wikipedia.org/wiki/Red_pill),
-and entered Wonderland by clicking on a magical link.
+## Getting Started
 
-## what-i-do
-
-These days, I mostly write [JavaScript](https://developer.mozilla.org/en/docs/Web/JavaScript),
-especially since I discovered [Node.js](http://nodejs.org/).
-I also create some [websites](http://nixtuts.info/) (not really my forte, though),
-and I occasionally touch some [Python](https://www.python.org/) and
-[Ruby](https://www.ruby-lang.org/en/), although my true love remains JavaScript.
-
-### my-projects
-
-I work on a few projects, including:
-
- * [Lo-Dash Web Builder](https://github.com/d10/lodash-webbuilder),
-   an online custom build client for [Lo-Dash](http://lodash.com/)
- * [VS AV Events](https://github.com/d10/vsavevents),
-   an email parser/displayer
-
-## contact-me
-
-I'm not always online, but when I am, you can find me on:
-
- * [GitHub](https://github.com/d10)
- * [Twitter](https://twitter.com/demoneaux)
- * [Email](mailto:demoneaux@gmail.com)
- * [SpeakerDeck](https://speakerdeck.com/d10)
- * [Medium](https://medium.com/@demoneaux)
+1. Clone this repository.
+   ```bash
+   $ git clone https://github.com/d10/d10.github.io.git
+   ```
+2. Modify files.
+3. Generate new files.<br>
+   Note: The build script requires [Node.js](http://nodejs.org).
+   ```bash
+   $ node build.js
+   ```
