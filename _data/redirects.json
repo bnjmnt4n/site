@@ -6,5 +6,9 @@
   {
   	"url": "platform-demo",
   	"redirect": "https://bestiejs.github.io/platform.js"
+  },
+  {
+    "url": "binaries",
+    "redirect": "https://github.com/d10/binaries"
   }
 ]
