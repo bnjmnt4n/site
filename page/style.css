@@ -4,14 +4,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.anchor {
+  text-decoration: none;
+  color: #888;
+}
+
 @media all and (min-width: 600px) {
   body {
     width: 65%;
     margin: 0 auto;
-  }
-
-  .anchor {
-  	text-decoration: none;
-  	color: #888;
   }
 }
