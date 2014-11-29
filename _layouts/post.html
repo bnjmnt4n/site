@@ -3,7 +3,8 @@ layout: default
 ---
 <article>
   <header>
-  {% include post_header.html post=page %}
+  {% assign post = page %}
+  {% include post_header.html %}
   </header>
   <div>
   {{ content }}
