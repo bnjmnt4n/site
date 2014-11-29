@@ -1,4 +1,20 @@
 ---
 layout: default
 ---
-Hi there! Work in progress, please come back later!
+<h2>Latest Posts</h2>
+{% for post in site.posts limit:5 %}		<article>
+  {% include post_header.html %}
+  {% if post.image %}	
+  {% include post_intro.html %}
+  {% endif %}
+  <p class="description">
+  {{ post.description }}
+  </p>
+  <p class="read-more">
+    <a href="{{ post.url }}">Read more→</a>
+  </p>
+</article>
+{% endfor %}
+
+<h2>Older Posts</h2>
+<p>Feel free to browse the <a href="/blog">post listings</a> page for older posts.</p>

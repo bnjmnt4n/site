@@ -1,2 +1,6 @@
-exclude: ['LICENSE', 'README.md', 'build.js', 'about-me/README.md', 'page/page.html', 'page/redirect.html']
-permalink: /blog/:title/index.html
+exclude: ['LICENSE', 'README.md', 'page/redirect.html']
+permalink: /blog/:title/
+markdown: kramdown
+kramdown:
+  auto_ids: true
+  transliterated_header_ids: true
