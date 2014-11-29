@@ -1,7 +1,49 @@
 body {
-  padding: 0 15px;
+  margin: 0;
   font: 100% Lato, Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+#top, #content, #bottom {
+  padding: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+#top, #content {
+  border: 0;
+  border-bottom: 1px solid #eee;
+}
+
+#top h1, #top nav, #top nav ul {
+  width: 100%;
+  text-align: center;
+}
+
+#top h1, #top nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+#top nav ul li {
+  font-size: 1.2em;
+  list-style: none;
+  display: inline;
+}
+
+#top nav ul li:last-child {
+  padding-right:0;
+}
+
+#top a, #top a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+#top a:hover, #top a:active {
+  opacity: 0.8;
+  text-decoration: underline;
 }
 
 .anchor {
@@ -9,9 +51,13 @@ body {
   color: #888;
 }
 
+#bottom {
+  text-align: center;
+}
+
 @media all and (min-width: 600px) {
-  body {
-    width: 65%;
-    margin: 0 auto;
+  #top, #content, #bottom {
+    padding-right: 17.5%;
+    padding-left: 17.5%;
   }
 }

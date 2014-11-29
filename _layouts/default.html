@@ -2,23 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>@d10</title>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}@d10</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
-    <link rel="stylesheet" href="page/style.css" media="screen">
+    <link rel="stylesheet" href="/page/style.css" media="screen">
   </head>
   <body>
-    <h1 id="header">d10.github.io</h1>
-    <div id="content">
-      <%= source %>
-    </div>
-    <div id="footer">
-      <p>&copy; 2014 Benjamin Tan.</p>
-    </div>
+    {% include header.html %}
+    <section id="content">
+      {{ page.content }}
+    </section>
+    {% include footer.html %}
     <script>
-      var protocol = location.protocol;
       // Redirect to HTTPS version
-      if (protocol == "http:" && protocol != "https:") {
+      if (location.protocol == "http:") {
         location.protocol = "https:";
       }
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));

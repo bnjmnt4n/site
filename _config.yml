@@ -1,1 +1,2 @@
 exclude: ['LICENSE', 'README.md', 'build.js', 'about-me/README.md', 'page/page.html', 'page/redirect.html']
+permalink: /blog/:title/index.html
