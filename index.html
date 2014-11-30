@@ -1,8 +1,12 @@
 ---
 layout: default
 ---
+<header id="about">
+{% include about.html %}
+</header>
 <h2>Latest Posts</h2>
-{% for post in site.posts limit:5 %}		<article>
+{% for post in site.posts limit:5 %}	
+<article>
   {% include post_header.html %}
   {% if post.image %}	
   {% include post_intro.html %}
