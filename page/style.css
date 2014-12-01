@@ -55,6 +55,35 @@ body {
   text-align: center;
 }
 
+.read-more:before, .read-more:after {
+  content: " ";
+  display: table;
+}
+
+.read-more:after {
+  clear: both;
+}
+
+.read-more a {
+  float: right;
+}
+
+#about {
+  background: #f2f2f2;
+  margin: 0;
+  margin-bottom: 1em;
+  padding: 15px;
+}
+
+#about img {
+  float: left;
+  margin-right: 1em;
+}
+
+#about p {
+  margin-bottom: 0;
+}
+
 @media all and (min-width: 600px) {
   #top, #content, #bottom {
     padding-right: 17.5%;
