@@ -62,7 +62,7 @@ navigator.userAgent;
 
 With this change, most platform detection libraries will detect IE 12 as Chrome 36.
 
-<!-- {% include post_image.html image='/blog/platform.js-v1.3.0/jsperf.jpg' caption='IE 12 detected as Chrome 36 on [jsPerf.com](http://jsperf.com/).' %} -->
+<!-- include post_image.html image='/blog/platform.js-v1.3.0/jsperf.jpg' caption='IE 12 detected as Chrome 36 on [jsPerf.com](http://jsperf.com/).' -->
 
 In Platform.js v1.3.0 though, we’ve fixed this to ensure that IE Technical Preview’s “Edge” token is used to infer the browser version, allowing for accurate detection of IE 12.
 
