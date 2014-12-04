@@ -6,9 +6,9 @@ description: Platform.js v1.3.0 has just been released. Here’s what’s new, a
 
 [Platform.js](https://github.com/bestiejs/platform.js) is a platform detection library, similar to [`ua-parser`](http://www.uaparser.org/) — a port of [Browserscope](http://www.browserscope.org/)’s user agent parser to other languages. However, it is written in JavaScript, and has a much smaller file size, by focussing on browsers that have larger market shares, as opposed to the [extensive list of browsers](https://github.com/ua-parser/uap-core/blob/master/regexes.yaml) supported by `ua-parser`.
 
-In the latest release — v1.3.0 — we’ve included bug fixes, optimizations and code cleanups galore. Apart from that, we’ve added platform detection support for 2 new browsers: IE Tech Preview (aka. IE 12), as well as IE Mobile 11 on Windows Mobile 8.1. In this post, we’ll go through the chnages
+In the latest release — v1.3.0 — we’ve included bug fixes, optimizations and code cleanups galore. Apart from that, we’ve added platform detection support for a few new browsers, including: IE Tech Preview (aka. IE 12), as well as IE Mobile 11 on Windows Mobile 8.1. In this post, we’ll go through an overview of some of the changes we’ve made.
 
-<h2 id="ie-technical-preview"><span class=text>IE Technical Preview / IE 12</span> <a class=anchor href="#ie-technical-preview">#</a></h2>
+## IE Technical Preview / IE 12
 
 [IE Technical Preview](http://devchannel.modern.ie/) / IE 12 is the developer version of IE. It runs on the [preview version of Windows 10](http://windows.microsoft.com/en-us/windows/preview), and is available for users to test at [remote.modern.ie](https://remote.modern.ie/). It comes with many changes to IE’s user agent string. Before we get to IE Technical Preview, I’d like to go through a brief overview of IE’s user agent string history, as well as how Platform.js uses them.
 
@@ -83,7 +83,7 @@ platform.layout;
 // 'Trident'
 {% endhighlight %}
 
-<h2 id="ie-mobile-11"><span class=text>IE Mobile 11</span> <a class=anchor href="#ie-mobile-11">#</a></h2>
+## IE Mobile 11
 
 [IE Mobile](http://www.microsoft.com/en-ie/mobile/) is the default browser on [Windows Phone](http://windowsphone.com/), Microsoft’s version of its Windows operating system for mobile phones. Like its desktop counterpart, the latest consumer version of IE Mobile is version 11.
 
@@ -111,11 +111,11 @@ This was done because Android and iOS devices occupy a large percentage of the m
 
 Thus, the user agent change is to allow IE Mobile to identify as either an Android device or an iPhone, so sites that only search for those browsers would also recognise IE Mobile, as described ob the IE Mobile team’s [blog post](http://blogs.msdn.com/b/ie/archive/2014/07/31/the-mobile-web-should-just-work-for-everyone.aspx). This is another reason not to use platform detection for anything other than information. Instead, an alternative way to detect mobile browsers is to search for occurrences of “Mobi” in `navigator.userAgent`.
 
-<h2 id="other-changes"><span class=text>Other Changes</span> <a class=anchor href="#other-changes">#</a></h2>
+## Other Changes
 
 We’ve also added support for [Opera Mini for iOS](http://www.opera.com/mobile/mini/iphone), and the recently released [Breach browser](http://breach.cc). Additionally, we’ve fixed issues with the detection of the 64-bit version of Chrome running on Windows.
 
-<h2 id="upcoming-changes"><span class=text>Upcoming Changes</span> <a class=anchor href="#upcoming-changes">#</a></h2>
+## Upcoming Changes
 
 For our next release, we intend to add support for [`atom-shell`](https://github.com/atom/atom-shell/releases) and [`node-webkit`](https://github.com/rogerwang/node-webkit). In addition, we are going  to improve detection of mobile browsers running in desktop mode.
 
