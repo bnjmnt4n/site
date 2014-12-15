@@ -45,6 +45,18 @@ html {
   text-decoration: underline;
 }
 
+h1 {
+  font-size: 2em;
+}
+
+p {
+  text-indent: 1em;
+}
+
+time + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+  text-indent: 1em;
+}
+
 .anchor {
   text-decoration: none;
   color: #888;
@@ -69,14 +81,13 @@ html {
 
 #about {
   background: #f2f2f2;
-  margin: 0;
-  margin-bottom: 1em;
-  padding: 15px;
+  margin: 1.5em 0;
+  padding: 0.75em;
 }
 
 #about img {
-  float: left;
-  margin-right: 1em;
+  float: right;
+  margin-left: 1em;
 }
 
 #about p {
