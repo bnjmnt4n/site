@@ -41,7 +41,6 @@ html {
 }
 
 #top a:hover, #top a:active {
-  opacity: 0.8;
   text-decoration: underline;
 }
 
@@ -53,8 +52,13 @@ p {
   text-indent: 1em;
 }
 
-time + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
-  text-indent: 1em;
+p.meta {
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p, p.meta + p {
+  text-indent: 0;
 }
 
 .anchor {
