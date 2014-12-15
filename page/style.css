@@ -7,6 +7,7 @@
 
 html {
   font: 100% Lato, Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  line-height: 1.5em;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -48,6 +49,10 @@ h1 {
   font-size: 2em;
 }
 
+h2 {
+  margin-top: 1.5em;
+}
+
 p {
   text-indent: 1em;
 }
@@ -57,7 +62,7 @@ p.meta {
   margin-bottom: 1.5em;
 }
 
-h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p, p.meta + p {
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p, .meta + p {
   text-indent: 0;
 }
 
@@ -83,6 +88,7 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p, p.meta + p {
   float: right;
 }
 
+/* About section */
 #about {
   background: #f2f2f2;
   margin: 1.5em 0;
@@ -94,7 +100,16 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p, p.meta + p {
   margin-left: 1em;
 }
 
-#about p {
+#about h1 {
+  font-size: 1.3125em;
+  line-height: 1.5em;
+}
+
+header#about {
+  margin-top: 0;
+}
+
+footer#about {
   margin-bottom: 0;
 }
 
