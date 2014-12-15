@@ -46,10 +46,15 @@ html {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.6875em;
+  line-height: 3em;
 }
 
 h2 {
+  font-size: 1.5em;
+}
+
+h2, h3, h4, h5, h6 {
   margin-top: 1.5em;
 }
 
@@ -58,11 +63,11 @@ p {
 }
 
 p.meta {
-  font-size: 1.5em;
+  font-size: 1.3125em;
   margin-bottom: 1.5em;
 }
 
-h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p, .meta + p {
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p, p.meta + p {
   text-indent: 0;
 }
 
@@ -121,8 +126,8 @@ code {
 pre {
   background-color: #fdf6e3;
   color: #586e75;
-  margin: 1em 0;
-  padding: .5em 20px;
+  margin: 0.75em 0;
+  padding: 0.75em 15px;
   word-wrap: break-word;
   border: 1px solid #ddd;
 }
