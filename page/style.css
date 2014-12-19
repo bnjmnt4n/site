@@ -6,6 +6,7 @@
 }
 
 html {
+  color: #222;
   font: 100% Lato, Helvetica Neue, Helvetica, Arial, sans-serif;
   line-height: 1.5em;
   -webkit-font-smoothing: antialiased;
@@ -31,15 +32,6 @@ html {
   font-size: 1.125em;
   list-style: none;
   display: inline;
-}
-
-#top a, #top a:visited {
-  color: black;
-  text-decoration: none;
-}
-
-#top a:hover, #top a:active {
-  text-decoration: underline;
 }
 
 h1 {
@@ -75,6 +67,20 @@ p {
 p.meta {
   font-size: 1.3125em;
   margin-bottom: 1.5em;
+}
+
+a {
+  color: #222;
+  border-bottom: 1px solid #ddd;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  border-color: #222;
+}
+
+a img {
+  border: 0;
 }
 
 h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p, p.meta + p, #post header p:first-child {
@@ -129,12 +135,13 @@ code {
 }
 
 pre {
+  border: 1px solid #ddd;
   background-color: #fdf6e3;
   color: #586e75;
-  margin: 0.75em 0;
+  margin: 0;
   padding: 0.75em 15px;
-  word-wrap: break-word;
-  border: 1px solid #ddd;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .highlight .c{color:#93a1a1}
