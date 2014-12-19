@@ -4,13 +4,11 @@
     <meta charset="utf-8">
     <title>{% if page.title %}{{ page.title }} - {% endif %}@d10</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% if description %}
-    <meta name="description" content="{{ description }}">
-    {% endif %}
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
     <link rel="stylesheet" href="/page/style.css" media="screen">
   </head>
-  <body{% if id %}id="{{ id }}"{% endif %}>
+  <body{% if page.id %} id="{{ page.id }}"{% endif %}>
     {% include header.html %}
     <section id="content">
       {{ content }}
