@@ -2,9 +2,19 @@
 layout: default
 id: home
 ---
-<header id="about">
-{% include about.html %}
-</header>
+<div id=main>
+<img src="https://gravatar.com/avatar/029b19dba521584d83398ada3ecf6131?s=150" alt=Gravatar width=150 height=150 srcset="https://gravatar.com/avatar/029b19dba521584d83398ada3ecf6131?s=300 2x">
+<h1>Benjamin Tan</h1>
+<ul>
+  <li><a href="mailto:demoneaux@gmail.com">Email</a></li>
+  <li><a href=https://twitter.com/demoneaux>Twitter</a></li>
+  <li><a href=https://github.com/d10>GitHub</a></li>
+</ul>
+<p>
+Hi! I’m <strong>Benjamin Tan</strong>, a 15-year old student from Singapore. I write code as a hobby, mostly HTML, CSS and JavaScript.
+</p>
+</div>
+
 <h2>Latest Posts</h2>
 {% for post in site.posts limit:5 %}	
 <article>
@@ -12,14 +22,14 @@ id: home
   {% if post.image %}	
   {% include post_intro.html %}
   {% endif %}
-  <p class="description">
+  <p class=description>
   {{ post.description }}
   </p>
-  <p class="read-more">
+  <div class=read-more>
     <a href="{{ post.url }}">Read more→</a>
   </p>
 </article>
 {% endfor %}
 
 <h2>Older Posts</h2>
-<p>Feel free to browse the <a href="/blog">post listings</a> page for older posts.</p>
+<p class=older>Browse the <a href=/blog>post listings</a>.</p>
