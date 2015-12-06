@@ -24,18 +24,9 @@ html {
   border-bottom: 1px solid #eee;
 }
 
-#top h1, #top nav, #top nav ul {
+#top h1 {
   width: 100%;
   text-align: center;
-}
-
-#top nav ul li, #main ul li {
-  font-size: 18px;
-  list-style: none;
-  display: inline;
-}
-
-#top h1 {
   font-size: 24px;
   margin-bottom: 5px;
 }
