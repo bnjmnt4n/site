@@ -2,11 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{% if page.title %}{{ page.title }} - {% endif %}@d10</title>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}d10.github.io</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+
     <link rel="stylesheet" href="/page/style.css" media="screen">
     <link href="/feeds.xml" rel="alternate" type="application/rss+xml" title="RSS feed">
+
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}d10.github.io">
+    <meta property="og:type" content="{% if page.id == "post" %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ page.url }}">
+    {% if page.description %}<meta property="og:description" content="{{ page.description }}">{% endif %}
   </head>
   <body{% if page.id %} id="{{ page.id }}"{% endif %}>
     {% include header.html %}
