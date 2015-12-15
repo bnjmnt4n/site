@@ -71,7 +71,9 @@ h3, #about h2, #home .headline, #blog .headline {
 }
 
 #main ul li {
+  display: inline;
   font-size: 20px;
+  list-style: none;
   padding: 0 20px;
 }
 
