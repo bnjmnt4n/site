@@ -1,5 +1,8 @@
 name: d10.github.io
-description: "@d10 posts random stuff here."
+description: "Benjamin Tan (@d10) posts random stuff here."
 url: https://d10.github.io
-exclude: ['LICENSE', 'README.md', 'page/redirect.html']
+id: "tag:d10.github.io,2014:/blog"
+exclude:
+  - "LICENSE"
+  - "README.md"
 permalink: /blog/:title/
