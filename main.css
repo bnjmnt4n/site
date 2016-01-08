@@ -31,10 +31,8 @@ html {
   margin-bottom: 5px;
 }
 
-#home #content #main,
-#home #content article,
-#home #content h2,
-#home #content p.older,
+#home #content,
+#blog #content,
 #post #content header,
 #post #content #body h2,
 #post #content #body h3,
@@ -57,20 +55,20 @@ h3, #about h2, #home .headline, #blog .headline {
   font-size: 20px;
 }
 
-#main {
+#home #content {
   text-align: center;
 }
 
-#main img {
+#home #content img {
   margin: 20px auto;
   border-radius: 150px;
 }
 
-#main ul {
+#home #content ul {
   margin: 15px 0;
 }
 
-#main ul li {
+#home #content ul li {
   display: inline;
   font-size: 20px;
   list-style: none;
@@ -244,10 +242,8 @@ code {
     padding-right: 17%;
     padding-left: 17%;
   }
-  #home #content #main,
-  #home #content h2,
-  #home #content article,
-  #home #content p.older,
+  #home #content,
+  #blog #content,
   #post #content header,
   #post #content #body h2,
   #post #content #body h3,

@@ -10,7 +10,7 @@
     <atom:link rel="self" type="application/rss+xml" href="{{ site.url }}/feed.rss" />
     <atom:link rel="alternate" type="application/atom+xml" href="{{ site.url }}/feed.atom" />
     <atom:link rel="alternate" type="text/html" href="{{ site.url }}/blog" />
-    {% for post in site.posts %}
+    {% for post in site.posts limit:5 %}
     <item>
       <title>{{ post.title | xml_escape }}</title>
       <description>{{ post.description | xml_escape }}</description>

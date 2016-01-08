@@ -1,11 +1,22 @@
 ---
 layout: default
-title: Blog Posts
+title: Blog
 id: blog
 ---
-<h1>Blog Posts</h1>
-<ul class=archives>
-{% for post in site.posts %}
+<h1>Blog</h1>
+{% for post in site.posts limit:5 %}	
+<article>
+  {% include post_header.html %}
+  <p class=description>
+  {{ post.description }}
+  </p>
+  <div class=read-more>
+    <a href="{{ post.url }}">Read more→</a>
+  </p>
+</article>
+{% endfor %}
+<ul>
+{% for post in site.posts offset:5 %}
   <li><a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>

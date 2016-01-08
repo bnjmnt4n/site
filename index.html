@@ -2,8 +2,7 @@
 layout: default
 id: home
 ---
-<div id=main>
-<img src="https://gravatar.com/avatar/029b19dba521584d83398ada3ecf6131?s=150" alt=Gravatar width=150 height=150 srcset="https://gravatar.com/avatar/029b19dba521584d83398ada3ecf6131?s=300 2x">
+<img id=gravatar src="https://gravatar.com/avatar/029b19dba521584d83398ada3ecf6131?s=150" alt=Gravatar width=150 height=150 srcset="https://gravatar.com/avatar/029b19dba521584d83398ada3ecf6131?s=300 2x">
 <h1>Benjamin Tan</h1>
 <ul>
   <li><a href="mailto:demoneaux@gmail.com">Email</a></li>
@@ -11,27 +10,9 @@ id: home
   <li><a href=https://github.com/d10>GitHub</a></li>
 </ul>
 <p>
-Hi! I’m <strong>Benjamin Tan</strong>, a 16-year old student from Singapore. I write code as a hobby, mostly HTML, CSS and JavaScript.
+Hi! I’m <strong>Benjamin Tan</strong>, a 16-year old student from Singapore. (That’s me above, on the left, with my friend Raziq.)
 </p>
-</div>
-
-<h2>Latest Posts</h2>
-{% for post in site.posts limit:5 %}	
-<article>
-  {% include post_header.html %}
-  {% if post.image %}	
-  {% include post_intro.html %}
-  {% endif %}
-  <p class=description>
-  {{ post.description }}
-  </p>
-  <div class=read-more>
-    <a href="{{ post.url }}">Read more→</a>
-  </p>
-</article>
-{% endfor %}
-
-<!--
-<h2>Older Posts</h2>
-<p class=older>Browse the <a href=/blog>post listings</a>.</p>
--->
+<p>
+I write code every once in a while, usually doing stuff about the Web.
+If you’re interested in technical stuff, you might want to check out <a href=/blog>my blog</a>, where I ramble on about web technologies including HTML, CSS and JavaScript.
+</p>

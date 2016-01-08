@@ -2,22 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{% if page.title %}{{ page.title }} — {% endif %}d10.github.io</title>
+    <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="/page/style.css" media="screen">
+    <link href="/main.css" rel="stylesheet">
 
     {% if page.id == "home" or page.id == "blog" %}
-    <link href="/feed.atom" rel="alternate" type="application/atom+xml" title="d10.github.io — Atom feed">
-    <link href="/feed.rss" rel="alternate" type="application/rss+xml" title="d10.github.io — RSS feed">
+    <link href="/feed.atom" rel="alternate" type="application/atom+xml" title="{{ site.name }} — Atom feed">
+    <link href="/feed.rss" rel="alternate" type="application/rss+xml" title="{{ site.name }} — RSS feed">
     {% endif %}
 
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
-
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} — {% endif %}d10.github.io">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} — {% endif %}{{ site.name }}">
     <meta property="og:type" content="{% if page.id == 'post' %}article{% else %}website{% endif %}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    {% if page.description %}<meta property="og:description" content="{{ page.description }}">{% endif %}
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   </head>
   <body{% if page.id %} id="{{ page.id }}"{% endif %}>
     {% include header.html %}
