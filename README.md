@@ -1,16 +1,10 @@
 # [d10.github.io](https://d10.github.io/)
 
-Hi, this is the Git repository for @d10's site.
+Benjamin Tan (@d10) posts random stuff here.
 
 ## Getting Started
 
-1. Clone this repository.
-   ```bash
-   $ git clone https://github.com/d10/d10.github.io.git
-   ```
-2. Modify files.
-3. Generate new files.<br>
-   Note: The build script requires [Node.js](http://nodejs.org).
-   ```bash
-   $ node build.js
-   ```
+1. Install [Jekyll](https://jekyllrb.com/).
+2. Clone this repository (`git clone https://github.com/d10/d10.github.io`).
+3. Modify files.
+4. Build using `jekyll build`: built files are stored in `_site`.
