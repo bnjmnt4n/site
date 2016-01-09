@@ -8,7 +8,7 @@
   <link rel="self" type="application/atom+xml" href="{{ site.url }}/feed.atom" />
   <link rel="alternate" type="text/html" href="{{ site.url }}/blog" />
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>{{ site.id }}</id>
+  <id>{{ site.atom_id }}</id>
   {% for post in site.posts limit:5 %}
   <entry>
     <title>{{ post.title | xml_escape }}</title>
@@ -16,7 +16,7 @@
     <summary>{{ post.description | xml_escape }}</summary>
     <id>tag:{{ site.url | replace:"https://","" }},{{ post.date | date: "%F" }}:{{ post.url }}</id>
     <author>
-      <name>Benjamin Tan</name>
+      <name>{{ site.author }}</name>
     </author>
     <published>{{ post.date | date_to_xmlschema }}</published>
     {% if post.last_modified_at %}

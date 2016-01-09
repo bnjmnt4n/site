@@ -75,6 +75,18 @@ h3, #about h2, #home .headline, #blog .headline {
   padding: 0 20px;
 }
 
+#home #content hr {
+  border: 0;
+  height: 1px;
+  margin: 20px 0;
+  background: #222;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #222, rgba(0, 0, 0, 0));
+}
+
+#home #content .extended-desc {
+  text-align: left;
+}
+
 p {
   text-indent: 24px;
 }
@@ -98,13 +110,8 @@ a img {
   border: 0;
 }
 
-h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p, p.meta + p, #post header p:first-child {
+h1 + p, h2 + p, h3 + p, #home #content p, p.meta + p, #post #body p:first-child {
   text-indent: 0;
-}
-
-.anchor {
-  text-decoration: none;
-  color: #888;
 }
 
 #bottom {
@@ -115,24 +122,15 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p, p.meta + p, #post header p:first
   list-style: none;
 }
 
-.read-more:before, .read-more:after {
-  content: " ";
-  display: table;
-}
-
-.read-more:after {
-  clear: both;
-}
-
-.read-more a {
-  float: right;
+.read-more {
+  text-align: right;
 }
 
 /* About section */
 #about {
   background: #f2f2f2;
-  margin: 24px 0 0;
-  padding: 12px;
+  margin: 24px 0 -24px;
+  padding: 12px 24px;
 }
 
 #about h2 {
@@ -226,15 +224,6 @@ code {
 .highlight .vg{color:#268bd2}
 .highlight .vi{color:#268bd2}
 .highlight .il{color:#2aa198}
-
-#about {
-  padding-right: 24px;
-  padding-left: 24px;
-}
-
-#about {
-  margin-bottom: -24px;
-}
 
 /* Desktop */
 @media all and (min-width: 800px) {

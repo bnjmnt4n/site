@@ -5,11 +5,10 @@
     <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
 
     {% if page.id == "home" or page.id == "blog" %}
-    <link href="/feed.atom" rel="alternate" type="application/atom+xml" title="{{ site.name }} — Atom feed">
-    <link href="/feed.rss" rel="alternate" type="application/rss+xml" title="{{ site.name }} — RSS feed">
+    <link rel="alternate" type="application/atom+xml" title="{{ site.name }} — Atom feed" href="/feed.atom">
     {% endif %}
 
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
@@ -25,12 +24,18 @@
     </section>
     {% include footer.html %}
     <script>
-      // Redirect to HTTPS version
+      // Redirect to HTTPS version.
       if (location.protocol == "http:") {
         location.protocol = "https:";
       }
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-38386306-2');ga('send','pageview');
+      // Google Analytics.
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create', 'UA-38386306-2', 'auto');
+      ga('send', 'pageview');
     </script>
   </body>
 </html>

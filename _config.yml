@@ -1,8 +1,12 @@
 name: d10.github.io
-description: "Benjamin Tan (@d10) posts random stuff here."
+description: Benjamin Tan posts random stuff here.
 url: https://d10.github.io
-id: "tag:d10.github.io,2014:/blog"
+author: Benjamin Tan
+atom_id: "tag:d10.github.io,2014:/blog"
 exclude:
   - "LICENSE"
   - "README.md"
 permalink: /blog/:title/
+gems:
+  - jekyll-last-modified-at
+  - jekyll-sitemap

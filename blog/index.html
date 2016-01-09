@@ -15,7 +15,7 @@ id: blog
   </p>
 </article>
 {% endfor %}
-<ul>
+<ul class=archives>
 {% for post in site.posts offset:5 %}
   <li><a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
