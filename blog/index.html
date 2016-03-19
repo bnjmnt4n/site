@@ -4,13 +4,13 @@ title: Blog
 id: blog
 ---
 <h1>Blog</h1>
-{% for post in site.posts limit:5 %}	
+{% for post in site.posts limit:3 %}	
 <article>
   {% include post_header.html %}
   <p class=description>
   {{ post.description }}
   </p>
-  <div class=read-more>
+  <p>
     <a href="{{ post.url }}">Read more→</a>
   </p>
 </article>

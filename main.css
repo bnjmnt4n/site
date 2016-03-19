@@ -115,30 +115,6 @@ h1 + p, h2 + p, h3 + p, #home #content p, p.meta + p, #post #body p:first-child 
   text-align: center;
 }
 
-.archives li {
-  list-style: none;
-}
-
-.read-more {
-  text-align: right;
-}
-
-/* About section */
-#about {
-  background: #f2f2f2;
-  margin: 24px 0 -24px;
-  padding: 12px 24px;
-}
-
-#about h2 {
-  margin: 0 0 10px;
-}
-
-#about img {
-  float: right;
-  margin: 0 0 15px 15px;
-}
-
 /* Code */
 code {
   font-family: Consolas, Courier New, monospace;
