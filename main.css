@@ -107,7 +107,7 @@ a img {
   border: 0;
 }
 
-h1 + p, h2 + p, h3 + p, #home #content p, p.meta + p, #post #body p:first-child {
+h1 + p, h2 + p, h3 + p, #home #content p, #blog #content p + p, p.meta + p, #post #body p:first-child {
   text-indent: 0;
 }
 
