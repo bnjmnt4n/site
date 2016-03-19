@@ -1,11 +1,11 @@
-name: @demoneaux
-description: Benjamin Tan posts random stuff here.
-url: https://demoneaux.github.io
-author: Benjamin Tan
+name: "@demoneaux"
+description: "Benjamin Tan posts random stuff here."
+url: "https://demoneaux.github.io"
+author: "Benjamin Tan"
 exclude:
   - "LICENSE"
   - "README.md"
-permalink: /blog/:title/
+permalink: "/blog/:title/"
 gems:
-  - jekyll-last-modified-at
-  - jekyll-sitemap
+  - "jekyll-last-modified-at"
+  - "jekyll-sitemap"
