@@ -20,8 +20,12 @@ html {
   padding-bottom: 24px;
 }
 
-#top, #content {
+#top {
   border-bottom: 1px solid #eee;
+}
+
+#bottom {
+  border-top: 1px solid #eee;
 }
 
 #top h1 {
@@ -51,12 +55,12 @@ h2 {
   margin: 40px 0 24px;
 }
 
-h3, #about h2, #home .headline, #blog .headline {
+h3, #about h2, #blog .headline {
   font-size: 20px;
 }
 
-#home #content {
-  text-align: center;
+#home #content p {
+  font-size: 24px;
 }
 
 #home #content img {
@@ -73,18 +77,7 @@ h3, #about h2, #home .headline, #blog .headline {
   font-size: 20px;
   list-style: none;
   padding: 0 20px;
-}
-
-#home #content hr {
-  border: 0;
-  height: 1px;
-  margin: 20px 0;
-  background: #222;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0), #222, rgba(0, 0, 0, 0));
-}
-
-#home #content .extended-desc {
-  text-align: left;
+  text-align: center;
 }
 
 p {
