@@ -2,18 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.name }}</title>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="/main.css">
     <script> if (location.hostname === 'demoneaux.github.io' && location.protocol !== 'https:') { location.protocol = 'https:'; } </script>
 
-    {% if page.id == "home" or page.id == "blog" %}
-    <link rel="alternate" type="application/atom+xml" title="{{ site.name }} — Atom feed" href="/feed.atom">
-    {% endif %}
-
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} — {% endif %}{{ site.name }}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}">
     <meta property="og:type" content="{% if page.id == 'post' %}article{% else %}website{% endif %}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">

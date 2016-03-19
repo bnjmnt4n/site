@@ -1,8 +1,7 @@
-name: demoneaux.github.io
+name: @demoneaux
 description: Benjamin Tan posts random stuff here.
 url: https://demoneaux.github.io
 author: Benjamin Tan
-atom_id: "tag:d10.github.io,2014:/blog"
 exclude:
   - "LICENSE"
   - "README.md"

@@ -1,4 +1,4 @@
-# [demoneaux.github.io](https://demoneaux.github.io/)
+# [@demoneaux](https://demoneaux.github.io/)
 
 Benjamin Tan posts random stuff here.
 
