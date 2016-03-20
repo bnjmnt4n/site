@@ -6,6 +6,14 @@ exclude:
   - "LICENSE"
   - "README.md"
 permalink: "/blog/:title/"
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      html_id: "post"
 gems:
   - "jekyll-last-modified-at"
   - "jekyll-sitemap"

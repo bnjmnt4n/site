@@ -11,21 +11,20 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-#top, #bottom {
+body {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#top,
+#content,
+#bottom {
   padding: 24px;
 }
 
+#top,
 #content {
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-
-#top {
   border-bottom: 1px solid #eee;
-}
-
-#bottom {
-  border-top: 1px solid #eee;
 }
 
 #top h1 {
@@ -33,16 +32,6 @@ html {
   text-align: center;
   font-size: 24px;
   margin-bottom: 5px;
-}
-
-#home #content,
-#blog #content,
-#post #content header,
-#post #content #body h2,
-#post #content #body h3,
-#post #content #body p {
-  margin-left: 24px;
-  margin-right: 24px;
 }
 
 h1 {
@@ -55,7 +44,8 @@ h2 {
   margin: 40px 0 24px;
 }
 
-h3, #about h2, #blog .headline {
+h3,
+#blog .headline {
   font-size: 20px;
 }
 
@@ -70,6 +60,7 @@ h3, #about h2, #blog .headline {
 
 #home #content img {
   margin: 20px auto;
+  border: 5px solid #eee;
   border-radius: 150px;
 }
 
@@ -85,7 +76,7 @@ h3, #about h2, #blog .headline {
 }
 
 p {
-  text-indent: 24px;
+  text-indent: 32px;
 }
 
 p.meta {
@@ -99,7 +90,9 @@ a {
   text-decoration: none;
 }
 
-a:hover, a:focus {
+a:active,
+a:focus,
+a:hover {
   border-color: #222;
 }
 
@@ -107,7 +100,13 @@ a img {
   border: 0;
 }
 
-h1 + p, h2 + p, h3 + p, #home #content p, #blog #content p + p, p.meta + p, #post #body p:first-child {
+h1 + p,
+h2 + p,
+h3 + p,
+#home #content p,
+#blog #content p + p,
+p.meta + p,
+#post #body p:first-child {
   text-indent: 0;
 }
 
@@ -123,7 +122,7 @@ code {
 .highlight {
   background-color: #fdf6e3;
   color: #586e75;
-  margin: 12px 0;
+  margin: 12px -24px;
   padding: 12px 24px;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
@@ -200,28 +199,4 @@ code {
 
 /* Desktop */
 @media all and (min-width: 800px) {
-  #top, #bottom {
-    padding-right: 17%;
-    padding-left: 17%;
-  }
-  #home #content,
-  #blog #content,
-  #post #content header,
-  #post #content #body h2,
-  #post #content #body h3,
-  #post #content #body p {
-    margin-right: 17%;
-    margin-left: 17%
-  }
-  .highlight {
-    padding-right: 17%;
-    padding-left: 17%;
-  }
-  #about {
-    margin-right: 17%;
-    margin-left: 17%;
-    margin-bottom: 0;
-    padding-right: 12px;
-    padding-left: 12px;
-  }
 }

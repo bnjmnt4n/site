@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Hello, World!
 description: I’m starting a new blog, where I’ll be posting about my various experiences programming with JavaScript and other technologies.
 ---

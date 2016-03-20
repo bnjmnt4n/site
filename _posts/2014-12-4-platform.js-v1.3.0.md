@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Platform.js v1.3.0
 description: Platform.js v1.3.0 has just been released. Here’s what’s new, as well as upcoming plans for future releases.
 ---
