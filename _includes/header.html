@@ -1,3 +1,9 @@
-<header id="top">
-  <h1><a href="/">{{ site.name }}</a></h1>
+<header id="top" class="{% if page.html_id == "home" %}full{% else %}lite{% endif %}">
+  <h1><a href="/">@demoneaux</a></h1>
+  <nav>
+    <ul><!--
+      --><li><a href="/blog/">Blog</a></li><!--
+      --><li><a href="https://twitter.com/demoneaux">Twitter</a></li><!--
+    --></ul>
+  </nav>
 </header>
