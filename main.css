@@ -131,14 +131,20 @@ a img {
   border: 0;
 }
 
-#home #content p,
-#blog #content p + p,
-p.meta + p {
-  text-indent: 0;
+/* Text indentation */
+
+p {
+  text-indent: 32px;
 }
 
-p + p {
-  text-indent: 32px;
+h1 + p,
+h2 + p,
+h3 + p,
+#home #content p,
+#blog #content p,
+#post #body p:first-child,
+p.meta {
+  text-indent: 0;
 }
 
 #bottom {
