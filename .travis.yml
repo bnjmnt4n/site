@@ -1,0 +1,19 @@
+sudo: false
+language: ruby
+rvm:
+  - "2.2.0"
+git:
+  depth: 10
+install:
+  - "gem install github-pages"
+  - "npm install @alrra/travis-scripts"
+script:
+  - "jekyll build"
+after_success:
+  - |
+      $(npm bin)/update-branch --commands "true" \
+                               --commit-message "Update site [ci skip]" \
+                               --directory "_site" \
+                               --distribution-branch "master" \
+                               --source-branch "source"
+      fi
