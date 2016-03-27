@@ -5,7 +5,9 @@ author: "Benjamin Tan"
 exclude:
   - "LICENSE"
   - "README.md"
+  - ".travis.yml"
 permalink: "/blog/:title/"
+highlighter: "rouge"
 defaults:
   -
     scope:

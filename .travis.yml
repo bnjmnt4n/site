@@ -5,7 +5,7 @@ rvm:
 git:
   depth: 10
 install:
-  - "gem install github-pages"
+  - "bundle install"
   - "npm install @alrra/travis-scripts"
 script:
   - "jekyll build"
