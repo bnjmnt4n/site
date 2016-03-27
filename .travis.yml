@@ -6,14 +6,13 @@ git:
   depth: 10
 install:
   - "bundle install"
-  - "npm install @alrra/travis-scripts"
+  - "npm install -g @alrra/travis-scripts"
 script:
   - "jekyll build"
 after_success:
   - |
-      $(npm bin)/update-branch --commands "true" \
-                               --commit-message "Update site [ci skip]" \
-                               --directory "_site" \
-                               --distribution-branch "master" \
-                               --source-branch "source"
-      fi
+      update-branch --commands "true" \
+                    --commit-message "Update site [ci skip]" \
+                    --directory "_site" \
+                    --distribution-branch "master" \
+                    --source-branch "source"
