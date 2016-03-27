@@ -4,15 +4,20 @@ rvm:
   - "2.2.0"
 git:
   depth: 10
+branches:
+  only:
+    - "source"
+before_install:
+  - "npm install -g npm@\"^3.0.0\""
 install:
   - "bundle install"
-  - "npm install -g @alrra/travis-scripts"
+  - "npm install"
 script:
   - "jekyll build"
 after_success:
   - |
-      update-branch --commands "true" \
-                    --commit-message "Update site [ci skip]" \
-                    --directory "_site" \
-                    --distribution-branch "master" \
-                    --source-branch "source"
+      $(npm bin)/update-branch --commands "true" \
+                               --commit-message "Update site [ci skip]" \
+                               --directory "_site" \
+                               --distribution-branch "master" \
+                               --source-branch "source"
