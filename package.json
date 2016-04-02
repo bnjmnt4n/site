@@ -1,6 +1,6 @@
 {
   "private": true,
   "devDependencies": {
-    "@alrra/travis-scripts": "^1.0.0"
+    "@alrra/travis-scripts": "^2.0.0"
   }
 }
