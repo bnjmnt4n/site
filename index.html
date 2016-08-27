@@ -1,19 +1,57 @@
----
-layout: default
-html_id: home
----
-<img id="gravatar" src="https://gravatar.com/avatar/029b19dba521584d83398ada3ecf6131?s=150" alt="Gravatar" width="150" height="150" srcset="https://gravatar.com/avatar/029b19dba521584d83398ada3ecf6131?s=300 2x">
-<h1>Benjamin Tan</h1>
-<ul><!--
-  --><li><a href="mailto:demoneaux@gmail.com">Email</a></li><!--
-  --><li><a href=https://twitter.com/demoneaux>Twitter</a></li><!--
-  --><li><a href=https://github.com/demoneaux>GitHub</a></li><!--
---></ul>
-<p>
-Hi! I’m <strong>Benjamin</strong>, a student from Singapore.
-<em>(That’s me above, on the left, with my friend Raziq.)</em>
-</p>
-<p>
-I write code every once in a while, usually doing stuff about the Web.
-If you’re interested in technical stuff, you might want to check out <a href="/blog/">my blog</a>.
-</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Benjamin Tan – @demoneaux</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700">
+    <link rel="stylesheet" href="./new.css">
+    <script>location.hostname=='demoneaux.github.io'&&location.protocol!='https:'&&(location.protocol='https:')</script>
+
+    <meta name="description" content="Benjamin Tan is a student who writes code occasionally.">
+    <meta property="og:title" content="Benjamin Tan – @demoneaux">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://demoneaux.github.io/">
+    <meta property="og:description" content="Benjamin Tan is a student who writes code occasionally.">
+  </head>
+  <body>
+    <div class="cover-image">
+      <div class="image default"></div>
+      <div class="image blur"></div>
+    </div>
+    <section>
+      <img src="https://gravatar.com/avatar/029b19dba521584d83398ada3ecf6131?s=150" alt="Gravatar" width="150" height="150" srcset="https://gravatar.com/avatar/029b19dba521584d83398ada3ecf6131?s=300 2x">
+      <h1>Benjamin Tan</h1>
+      <ul><!--
+        --><li><a href="mailto:demoneaux@gmail.com">Email</a></li><!--
+        --><li><a href=https://twitter.com/demoneaux>Twitter</a></li><!--
+        --><li><a href=https://github.com/demoneaux>GitHub</a></li><!--
+      --></ul>
+      <p>
+        Hi! I’m <strong>Benjamin</strong>, a student from Singapore.
+        <em>(That’s me above, on the left, with my friend Raziq.)</em>
+      </p>
+      <p>
+        I write code every once in a while, usually doing stuff about the Web.
+        If you’re interested in technical stuff, you might want to check out
+        <a href="https://medium.com/@demoneaux">my blog</a>.
+      </p>
+    </section>
+    <script>
+      window.onscroll = function() {
+        document.querySelector('.image.blur').style.opacity =
+          document.body.scrollTop / 200;
+      };
+
+      // Google Analytics.
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create', 'UA-38386306-7', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
