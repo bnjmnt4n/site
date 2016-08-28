@@ -1,10 +1,3 @@
-/* Basic reset */
-* {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
 html {
   color: #222;
   font: 18px/30px Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -12,107 +5,35 @@ html {
 }
 
 body {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.header,
-#content,
-.footer {
-  padding: 24px;
-}
-
-.header,
-#content {
-  border-bottom: 1px solid #eee;
-}
-
-.header li {
-  display: inline;
-  list-style: none;
-}
-
-.header--lite h1,
-.header--lite nav,
-.header--lite ul,
-.header--lite li {
-  display: inline;
-  font-size: 20px;
-}
-
-.header--lite li {
-  padding-left: 15px;
-}
-
-.header--full {
-  text-align: center;
-}
-
-.header--full h1 {
-  font-size: 24px;
-  line-height: 1.5;
+  height: 100vh;
   margin: 0;
 }
 
-.header--full ul {
-  margin: 5px 0;
+.cover-image {
+  position: relative;
+  width: 100%;
+  height: 65%;
+  z-index: -1;
+  top: 0;
+  left: 0;
 }
 
-.header--full li {
-  padding: 0 10px;
+.cover-image .image {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
-h1 {
-  font-size: 28px;
-  line-height: 1.5;
-  margin-bottom: 10px;
+.cover-image .image.default {
+  background-image: url(https://pbs.twimg.com/profile_banners/384546082/1422525028/1500x500);
 }
 
-h2 {
-  font-size: 24px;
-  margin: 30px 0 10px;
-}
-
-h3,
-#blog .headline {
-  font-size: 20px;
-}
-
-#home #content {
+section {
+  background: #fafafa;
   text-align: center;
-}
-
-#home #content p {
-  font-size: 24px;
-  line-height: 1.5;
-  text-align: left;
-}
-
-#home #content img {
-  margin: 20px auto;
-  border: 5px solid #eee;
-  border-radius: 150px;
-}
-
-#home #content ul {
-  margin: 15px 0;
-}
-
-#home #content ul li {
-  display: inline;
-  font-size: 20px;
-  list-style: none;
-  padding: 0 20px;
-}
-
-#blog article + article {
-  margin-top: 30px;
-}
-
-p.meta {
-  font-size: 14px;
-  line-height: 18px;
-  margin-bottom: 20px;
 }
 
 a {
@@ -121,52 +42,55 @@ a {
   text-decoration: none;
 }
 
-a:active,
-a:focus,
-a:hover {
-  border-color: #222;
-}
-
-a img {
-  border: 0;
-}
-
-/* Text indentation */
-
 p {
-  text-indent: 32px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: left;
 }
 
-h1 + p,
-h2 + p,
-h3 + p,
-#home #content p,
-#blog #content p,
-#post #body p:first-child,
-p.meta {
-  text-indent: 0;
+img {
+  margin: -80px auto 0;
+  border: 5px solid #eee;
+  border-radius: 150px;
 }
 
-.footer {
-  text-align: center;
+h1 {
+  font-size: 28px;
+  line-height: 1.5;
+  margin: 0 auto;
 }
 
-/* Code */
-code {
-  font-family: Consolas, Courier New, monospace;
+ul {
+  margin: 15px 0;
+  padding: 0;
 }
 
-.highlight {
-  background-color: #fdf6e3;
-  color: #586e75;
-  margin: 12px -24px;
-  padding: 12px 24px;
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch;
+ul li {
+  display: inline;
+  font-size: 20px;
+  list-style: none;
+  padding: 0 10px;
 }
 
-.highlight .c{color:#93a1a1}.highlight .err{color:#586e75}.highlight .g{color:#586e75}.highlight .k{color:#859900}.highlight .l{color:#586e75}.highlight .n{color:#586e75}.highlight .o{color:#859900}.highlight .x{color:#cb4b16}.highlight .p{color:#586e75}.highlight .cm{color:#93a1a1}.highlight .cp{color:#859900}.highlight .c1{color:#93a1a1}.highlight .cs{color:#859900}.highlight .gd{color:#2aa198}.highlight .ge{color:#586e75;font-style:italic}.highlight .gr{color:#dc322f}.highlight .gh{color:#cb4b16}.highlight .gi{color:#859900}.highlight .go{color:#586e75}.highlight .gp{color:#586e75}.highlight .gs{color:#586e75;font-weight:bold}.highlight .gu{color:#cb4b16}.highlight .gt{color:#586e75}.highlight .kc{color:#cb4b16}.highlight .kd{color:#268bd2}.highlight .kn{color:#859900}.highlight .kp{color:#859900}.highlight .kr{color:#268bd2}.highlight .kt{color:#dc322f}.highlight .ld{color:#586e75}.highlight .m{color:#2aa198}.highlight .s{color:#2aa198}.highlight .na{color:#586e75}.highlight .nb{color:#B58900}.highlight .nc{color:#268bd2}.highlight .no{color:#cb4b16}.highlight .nd{color:#268bd2}.highlight .ni{color:#cb4b16}.highlight .ne{color:#cb4b16}.highlight .nf{color:#268bd2}.highlight .nl{color:#586e75}.highlight .nn{color:#586e75}.highlight .nx{color:#586e75}.highlight .py{color:#586e75}.highlight .nt{color:#268bd2}.highlight .nv{color:#268bd2}.highlight .ow{color:#859900}.highlight .w{color:#586e75}.highlight .mf{color:#2aa198}.highlight .mh{color:#2aa198}.highlight .mi{color:#2aa198}.highlight .mo{color:#2aa198}.highlight .sb{color:#93a1a1}.highlight .sc{color:#2aa198}.highlight .sd{color:#586e75}.highlight .s2{color:#2aa198}.highlight .se{color:#cb4b16}.highlight .sh{color:#586e75}.highlight .si{color:#2aa198}.highlight .sx{color:#2aa198}.highlight .sr{color:#dc322f}.highlight .s1{color:#2aa198}.highlight .ss{color:#2aa198}.highlight .bp{color:#268bd2}.highlight .vc{color:#268bd2}.highlight .vg{color:#268bd2}.highlight .vi{color:#268bd2}.highlight .il{color:#2aa198}
+/*.home__icons .icon {
+  font-size: 32px;
+  color: rgba($primary, 0.6);
+  transition: color 0.3s ease;
 
-/* Desktop */
-@media all and (min-width: 800px) {
+  &:hover {
+    color: $primary;
+  }
+}
+*/
+
+@media screen and (min-width: 700px) {
+  .cover-image .image.blur {
+    background: url(https://pbs.twimg.com/profile_banners/384546082/1422525028/1500x500);
+    -webkit-filter: blur(5px) brightness(0.7);
+    filter: blur(5px) brighten(0.7);
+    opacity: 0;
+  }
 }
