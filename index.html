@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700">
-    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="./main.css">
     <script>location.hostname=='demoneaux.github.io'&&location.protocol!='https:'&&(location.protocol='https:')</script>
 
     <meta name="description" content="Benjamin Tan is a student who writes code occasionally.">
@@ -17,16 +17,15 @@
   </head>
   <body>
     <div class="cover-image">
-      <div class="image default"></div>
-      <div class="image blur"></div>
+      <img src="https://pbs.twimg.com/profile_banners/384546082/1422525028/1500x500">
     </div>
     <section>
-      <img src="https://gravatar.com/avatar/029b19dba521584d83398ada3ecf6131?s=150" alt="Gravatar" width="150" height="150" srcset="https://gravatar.com/avatar/029b19dba521584d83398ada3ecf6131?s=300 2x">
+      <img class="gravatar" src="https://gravatar.com/avatar/029b19dba521584d83398ada3ecf6131?s=150" alt="Gravatar" width="150" height="150" srcset="https://gravatar.com/avatar/029b19dba521584d83398ada3ecf6131?s=300 2x">
       <h1>Benjamin Tan</h1>
       <ul><!--
         --><li><a href="mailto:demoneaux@gmail.com">Email</a></li><!--
-        --><li><a href=https://twitter.com/demoneaux>Twitter</a></li><!--
-        --><li><a href=https://github.com/demoneaux>GitHub</a></li><!--
+        --><li><a href="https://twitter.com/demoneaux">Twitter</a></li><!--
+        --><li><a href="https://github.com/demoneaux">GitHub</a></li><!--
       --></ul>
       <p>
         Hi! I’m <strong>Benjamin</strong>, a student from Singapore.
@@ -38,10 +37,28 @@
         <a href="https://medium.com/@demoneaux">my blog</a>.
       </p>
     </section>
+    <!--<footer>
+      &copy; 2016 Benjamin Tan
+    </footer>-->
     <script>
+      var image = document.querySelector('.cover-image img');
+
       window.onscroll = function() {
-        document.querySelector('.image.blur').style.opacity =
-          document.body.scrollTop / 200;
+        var scroll = Math.min(document.body.scrollTop / 200, 1),
+            blur = (scroll * 5).toFixed(2),
+            brighten = (1 - scroll * 0.3).toFixed(2);
+
+        image.style.webkitFilter = 'blur(' + blur + 'px) brightness(' + brighten + ')';
+        image.style.mozFilter = image.style.msFilter = image.style.filter =
+          'blur(' + blur + 'px) brighten(' + brighten + ')';
+      };
+
+      window.onload = window.onresize = function() {
+        var height = image.clientHeight;
+        if (height > 0) {
+          document.querySelector('.cover-image').style.height = image.clientHeight + 'px';
+          image.style.position = 'fixed';
+        }
       };
 
       // Google Analytics.

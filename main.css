@@ -1,7 +1,8 @@
 html {
-  color: #222;
   font: 18px/30px Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  background: #fafafa;
+  color: #222;
 }
 
 body {
@@ -12,23 +13,13 @@ body {
 .cover-image {
   position: relative;
   width: 100%;
-  height: 65%;
   z-index: -1;
   top: 0;
   left: 0;
 }
 
-.cover-image .image {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-.cover-image .image.default {
-  background-image: url(https://pbs.twimg.com/profile_banners/384546082/1422525028/1500x500);
+.cover-image img {
+  max-width: 100%;
 }
 
 section {
@@ -51,8 +42,8 @@ p {
   text-align: left;
 }
 
-img {
-  margin: -80px auto 0;
+.gravatar {
+  margin: 20px auto 0;
   border: 5px solid #eee;
   border-radius: 150px;
 }
@@ -86,11 +77,8 @@ ul li {
 }
 */
 
-@media screen and (min-width: 700px) {
-  .cover-image .image.blur {
-    background: url(https://pbs.twimg.com/profile_banners/384546082/1422525028/1500x500);
-    -webkit-filter: blur(5px) brightness(0.7);
-    filter: blur(5px) brighten(0.7);
-    opacity: 0;
+@media (min-width: 700px) {
+  .gravatar {
+    margin-top: -80px;
   }
 }
