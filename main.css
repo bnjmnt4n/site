@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+
 html {
   font: 18px/30px Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -10,9 +14,14 @@ body {
   margin: 0;
 }
 
+/* ==========================================================================
+   Cover image
+   ========================================================================== */
+
 .cover-image {
   position: relative;
   width: 100%;
+  height: auto;
   z-index: 0;
   top: 0;
   left: 0;
@@ -26,16 +35,30 @@ body {
 .cover-image em {
   display: block;
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  padding: 10px;
+  bottom: 0;
+  left: 0;
   background: white;
   background: rgba(255, 255, 255, 0.7);
+  border-radius: 0 8px 0 0;
+  -webkit-transition: background 0.5s ease;
+  -moz-transition: background 0.5s ease;
+  transition: background 0.5s ease;
+}
+
+.cover-image em:hover {
+  background: white;
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .cover-image a {
-  border-bottom: 1px solid #222;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: underline;
 }
+
+/* ==========================================================================
+   Main content
+   ========================================================================== */
 
 section {
   z-index: 999;
@@ -93,6 +116,10 @@ ul li {
   }
 }
 */
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
 
 @media (min-width: 700px) {
   .gravatar {

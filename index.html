@@ -42,9 +42,10 @@
       &copy; 2016 Benjamin Tan
     </footer>-->
     <script>
-      var image = document.querySelector('.cover-image img');
+      var cover = document.querySelector('.cover-image'),
+          image = document.querySelector('.cover-image img');
 
-      window.onscroll = function() {
+      function scroll() {
         var scroll = Math.min(document.body.scrollTop / 200, 1),
             blur = (scroll * 5).toFixed(2),
             brighten = (1 - scroll * 0.3).toFixed(2);
@@ -52,13 +53,16 @@
         image.style.webkitFilter = 'blur(' + blur + 'px) brightness(' + brighten + ')';
         image.style.mozFilter = image.style.msFilter = image.style.filter =
           'blur(' + blur + 'px) brighten(' + brighten + ')';
-      };
+      }
 
       window.onload = window.onresize = function() {
         var height = image.clientHeight;
         if (height > 0) {
-          document.querySelector('.cover-image').style.height = image.clientHeight + 'px';
-          image.style.position = 'fixed';
+          cover.style.height = height + 'px';
+          var on = window.innerWidth >= 700 && !window.onsroll;
+
+          image.style.position = on ? 'fixed' : 'static';
+          window.onscroll = on ? scroll : null;
         }
       };
 
