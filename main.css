@@ -32,30 +32,6 @@ body {
   min-height: 80px;
 }
 
-.cover-image em {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: white;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 0 8px 0 0;
-  -webkit-transition: background 0.5s ease;
-  -moz-transition: background 0.5s ease;
-  transition: background 0.5s ease;
-}
-
-.cover-image em:hover {
-  background: white;
-  background: rgba(255, 255, 255, 0.95);
-}
-
-.cover-image a {
-  display: inline-block;
-  padding: 10px;
-  text-decoration: underline;
-}
-
 /* ==========================================================================
    Main content
    ========================================================================== */
@@ -65,12 +41,20 @@ section {
   position: relative;
   background: #fafafa;
   text-align: center;
+  padding: 0 0 30px;
 }
 
 a {
   color: #222;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid #bbb;
   text-decoration: none;
+  transition: border-bottom-color 0.3s ease;
+}
+
+a:hover,
+a:focus,
+a:active {
+  border-bottom-color: #666;
 }
 
 p {
