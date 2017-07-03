@@ -10,7 +10,6 @@ html {
 }
 
 body {
-  height: 100vh;
   margin: 0;
 }
 
@@ -21,15 +20,20 @@ body {
 .cover-image {
   position: relative;
   width: 100%;
-  height: auto;
-  z-index: 0;
-  top: 0;
-  left: 0;
+  height: 300px;
 }
 
-.cover-image img {
+.cover-image div {
+  z-index: 0;
   width: 100%;
-  min-height: 80px;
+  height: 100%;
+  position: fixed;
+  background: url(cover-image.jpg) contain no-repeat white;
+}
+
+.cover-image .blur {
+  z-index: 1;
+  filter: brightness(0.6) blur(2px);
 }
 
 /* ==========================================================================
@@ -45,16 +49,20 @@ section {
 }
 
 a {
-  color: #222;
-  border-bottom: 2px solid #bbb;
+  color: #22BAD9;
+  border-bottom: 2px solid #22BAD9;
   text-decoration: none;
-  transition: border-bottom-color 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 a:hover,
 a:focus,
 a:active {
-  border-bottom-color: #666;
+  color: #fff;
+  border-bottom-color: #FF69b4;
+  background: #22BAD9;
+  text-decoration: none;
 }
 
 p {
@@ -67,13 +75,16 @@ p {
 }
 
 .gravatar {
-  margin: 20px auto 0;
+  margin: -50px auto 0;
   border: 5px solid #eee;
   border-radius: 150px;
+  width: 100px;
+  height: 100px;
 }
 
 h1 {
-  font-size: 28px;
+  font-family: Roboto Slab, serif;
+  font-size: 36px;
   line-height: 1.5;
   margin: 0 auto;
 }
@@ -108,5 +119,7 @@ ul li {
 @media (min-width: 700px) {
   .gravatar {
     margin-top: -80px;
+    width: 150px;
+    height: 150px;
   }
 }

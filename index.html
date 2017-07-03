@@ -2,22 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Benjamin Tan – @demoneaux</title>
+    <title>Benjamin Tan</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Roboto+Slab">
     <link rel="stylesheet" href="./main.css">
-    <script>location.hostname=='demoneaux.github.io'&&location.protocol!='https:'&&(location.protocol='https:')</script>
+    <script>location.protocol=='http:'&&(location.protocol='https:')</script>
 
     <meta name="description" content="Benjamin Tan is a student who writes code occasionally.">
-    <meta property="og:title" content="Benjamin Tan – @demoneaux">
+    <meta property="og:title" content="Benjamin Tan">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://demoneaux.github.io/">
+    <meta property="og:url" content="https://bnjmntn.now.sh/">
     <meta property="og:description" content="Benjamin Tan is a student who writes code occasionally.">
   </head>
   <body>
     <div class="cover-image">
-      <img src="./cover-image.jpg">
+      <div style="background-image: url(cover-image.jpg)"></div>
+      <div class="blur" style="background-image: url(cover-image.jpg)"></div>
     </div>
     <section>
       <img class="gravatar" src="https://gravatar.com/avatar/029b19dba521584d83398ada3ecf6131?s=150" alt="Gravatar" width="150" height="150" srcset="https://gravatar.com/avatar/029b19dba521584d83398ada3ecf6131?s=300 2x">
@@ -29,7 +30,6 @@
       --></ul>
       <p>
         Hi! I’m <strong>Benjamin</strong>, a student from Singapore.
-        <em>(That’s me above, on the left, with my friend Raziq.)</em>
       </p>
       <p>
         I write code every once in a while, usually doing stuff about the Web.
@@ -42,27 +42,25 @@
     </footer>-->
     <script>
       var cover = document.querySelector('.cover-image'),
-          image = document.querySelector('.cover-image img');
+          blurImage = document.querySelector('.blur');
+
+      var prevBrightness = 0;
+      function setBlur(blur) {
+        blurImage.style.opacity = blur;
+      }
 
       function scroll() {
-        var scroll = Math.min(document.body.scrollTop / 200, 1),
-            blur = (scroll * 5).toFixed(2),
-            brighten = (1 - scroll * 0.3).toFixed(2);
+        var scroll = document.body.scrollTop / 200;
 
-        image.style.webkitFilter = 'blur(' + blur + 'px) brightness(' + brighten + ')';
-        image.style.mozFilter = image.style.msFilter = image.style.filter =
-          'blur(' + blur + 'px) brighten(' + brighten + ')';
+        setBlur(scroll);
       }
 
       window.onload = window.onresize = function() {
-        var height = image.clientHeight;
-        if (height > 0) {
-          cover.style.height = height + 'px';
-          var on = window.innerWidth >= 700 && !window.onsroll;
+        var width = cover.offsetWidth;
+        cover.style.height = Math.floor(width / 3) + 'px';
+        var on = window.innerWidth >= 700;
 
-          image.style.position = on ? 'fixed' : 'static';
-          window.onscroll = on ? scroll : null;
-        }
+        window.onscroll = on ? (scroll(), scroll) : (setBlur(0), null);
       };
 
       // Google Analytics.

@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/bnjmnt4n
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://bnjmnt4n.now.sh
+  * I am bnjmnt4n (https://keybase.io/bnjmnt4n) on keybase.
+  * I have a public key ASDjdRv5Z2oSFkPX4p2gKo0qjUxXWNLfcM9aAsQYrFV_5Ao
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120ad74aa4f866428f862cb61b29f006b50c70233b1898523c388d671f690c200960a",
+            "host": "keybase.io",
+            "kid": "0120e3751bf9676a121643d7e29da02a8d2a8d4c5758d2df70cf5a02c418ac557fe40a",
+            "uid": "0e88bbc144d9888aba42a84f3fa1c419",
+            "username": "bnjmnt4n"
+        },
+        "merkle_root": {
+            "ctime": 1499054021,
+            "hash": "47d5ff120d6dbecad3579228bf86c8153ffefb6512f145b10d3286427b6c62cf625d2d4d060cf7194a80bac94dca7a3903fe9d03e148ee876fccadc30df7bbb3",
+            "hash_meta": "8ea47e9cc44ef01b5bd493e10184179c37d3e12ca337cb3c2abc03e54f02ce99",
+            "seqno": 1206795
+        },
+        "service": {
+            "hostname": "bnjmnt4n.now.sh",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.24"
+    },
+    "ctime": 1499054052,
+    "expire_in": 504576000,
+    "prev": "5cd7e71a8d67fd3bf218f464538e38a58b33797f25f722472dd351720a22952e",
+    "seqno": 9,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg43Ub+WdqEhZD1+KdoCqNKo1MV1jS33DPWgLEGKxVf+QKp3BheWxvYWTFA0d7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYWQ3NGFhNGY4NjY0MjhmODYyY2I2MWIyOWYwMDZiNTBjNzAyMzNiMTg5ODUyM2MzODhkNjcxZjY5MGMyMDA5NjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZTM3NTFiZjk2NzZhMTIxNjQzZDdlMjlkYTAyYThkMmE4ZDRjNTc1OGQyZGY3MGNmNWEwMmM0MThhYzU1N2ZlNDBhIiwidWlkIjoiMGU4OGJiYzE0NGQ5ODg4YWJhNDJhODRmM2ZhMWM0MTkiLCJ1c2VybmFtZSI6ImJuam1udDRuIn0sIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDk5MDU0MDIxLCJoYXNoIjoiNDdkNWZmMTIwZDZkYmVjYWQzNTc5MjI4YmY4NmM4MTUzZmZlZmI2NTEyZjE0NWIxMGQzMjg2NDI3YjZjNjJjZjYyNWQyZDRkMDYwY2Y3MTk0YTgwYmFjOTRkY2E3YTM5MDNmZTlkMDNlMTQ4ZWU4NzZmY2NhZGMzMGRmN2JiYjMiLCJoYXNoX21ldGEiOiI4ZWE0N2U5Y2M0NGVmMDFiNWJkNDkzZTEwMTg0MTc5YzM3ZDNlMTJjYTMzN2NiM2MyYWJjMDNlNTRmMDJjZTk5Iiwic2Vxbm8iOjEyMDY3OTV9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiYm5qbW50NG4ubm93LnNoIiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMjQifSwiY3RpbWUiOjE0OTkwNTQwNTIsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiNWNkN2U3MWE4ZDY3ZmQzYmYyMThmNDY0NTM4ZTM4YTU4YjMzNzk3ZjI1ZjcyMjQ3MmRkMzUxNzIwYTIyOTUyZSIsInNlcW5vIjo5LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQCwzeojhbeO1kh2Agpk/DVDSJU6cRl6suNwYnUbApYLvjQtEQClMPxdscCkt85DPRcON1CQxmoziEue2tBH48gKoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCAngj63KPlQpx6n5//DdGMxiMN0H84uIKwro0L0AISpi6N0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/bnjmnt4n
+
+==================================================================
